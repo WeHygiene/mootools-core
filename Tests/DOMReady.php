@@ -34,7 +34,8 @@ var testElement = document.createElement('div'),
 var	MESSAGES = document.createElement('div')
 ,	thingsThatHappened = {}
 
-function somethingHappened(id, result){
+function somethingHappened(id, result)
+	{
 	if (window.ONLOAD) document.body.insertBefore(MESSAGES, document.body.firstChild)
 
 	if (typeof result == 'function') result = result()
@@ -58,7 +59,8 @@ function somethingHappened(id, result){
 var	START_TIME = +new Date
 function isNotLoaded(){ return !!(window.PARSED && !window.ONLOAD) }
 
-if (false <?php if (isset($_GET['iframe'])) echo '|| true'; ?>){
+if (false <?php if (isset($_GET['iframe'])) echo '|| true'; ?>)
+{
 	try {
 		document.domain = 'localhost'
 		somethingHappened("document.domain = 'localhost'", true)
@@ -226,7 +228,8 @@ function pollReadyState(){
 	lastReadyState = readyState
 }
 
-function pollBodyExists(){
+function pollBodyExists()
+	{
 	var	PASS
 
 	try {
